@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <title>App busca endereços</title>
+        <meta charset="utf-8">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="xmltojson.js"></script>
+        <script src="buscaPorCep.js">
+        </script>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-light bg-light mb-4">
+            <div class="container">
+                <div class="navbar-brand mb-0 h1">
+                    <h3>Pesquisa de Endereço</h3>
+                </div>
+            </div>
+        </nav>
+
+       <div class="container">
+        <div class="row form-group">
+            <div class="col-md-3">
+                <input class="form-control" placeholder="CEP" type="number" onblur="getDadosEnderecoPorCep(this.value)">
+            </div>
+
+            <div class="col-md-9">
+                <input id="endereco" class="form-control" placeholder="Endereço" type="text" readonly disabled>
+            </div>
+
+            <div class="col-md-6 mt-3">
+                <input id="bairro" class="form-control" placeholder="Bairro" type="text" readonly disabled>
+            </div>
+
+            <div class="col-md-4 mt-3">
+                <input id="cidade" class="form-control" placeholder="Cidade" readonly disabled>
+            </div>
+
+            <div class="col-md-2 mt-3">
+                <input id="uf" class="form-control" placeholder="UF" readonly disabled>
+            </div>
+
+            <div class="row col-md-12 mt-3 text-center">
+                <strong class="text-center col-md-12 col text-dark" id="erro">Insira o CEP desejado</strong>
+            </div>
+
+            
+        </div>
+       </div>
+    </body>
+</html>
